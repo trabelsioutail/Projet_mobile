@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:strokeColor="@color/purple_200"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- En-tête du cours -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Icône du cours -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:cardCornerRadius="24dp"
+                app:cardBackgroundColor="@color/purple_500">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_book"
+                    android:tint="@android:color/white"
+                    tools:ignore="UseAppTint" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Titre et date -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textCourseTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.EduNova.Headline3"
+                    android:textColor="@color/purple_700"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    tools:text="Développement Web Avancé" />
+
+                <TextView
+                    android:id="@+id/textCourseDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.EduNova.Caption"
+                    android:textColor="@color/gray_600"
+                    android:layout_marginTop="2dp"
+                    tools:text="Créé le 2024-01-15" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/textCourseDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textAppearance="@style/TextAppearance.EduNova.Body2"
+            android:textColor="@color/gray_700"
+            android:maxLines="3"
+            android:ellipsize="end"
+            tools:text="Maîtrisez React, Node.js et les architectures modernes du web" />
+
+        <!-- Statistiques -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <!-- Nombre d'étudiants -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_people"
+                    android:tint="@color/purple_500"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:id="@+id/textStudentsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textAppearance="@style/TextAppearance.EduNova.Caption"
+                    android:textColor="@color/gray_600"
+                    tools:text="25 étudiants" />
+
+            </LinearLayout>
+
+            <!-- Nombre de contenus -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_folder"
+                    android:tint="@color/purple_500"
+                    tools:ignore="UseAppTint" />
+
+                <TextView
+                    android:id="@+id/textContentsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:textAppearance="@style/TextAppearance.EduNova.Caption"
+                    android:textColor="@color/gray_600"
+                    tools:text="12 contenus" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Bouton d'action -->
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="12dp"
+            android:text="Voir le cours"
+            android:textSize="12sp"
+            style="@style/Widget.Material3.Button.TextButton"
+            app:icon="@drawable/ic_arrow_forward"
+            app:iconGravity="end" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

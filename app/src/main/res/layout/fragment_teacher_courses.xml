@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- En-tête -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="@color/purple_500">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_book"
+            android:tint="@android:color/white"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:text="Mes Cours"
+            android:textAppearance="@style/TextAppearance.EduNova.Headline2"
+            android:textColor="@android:color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonAddCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nouveau"
+            android:textSize="12sp"
+            style="@style/Widget.Material3.Button.TextButton"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@android:color/white"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <!-- Contenu principal -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- RecyclerView pour les cours -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewCourses"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:clipToPadding="false"
+            tools:listitem="@layout/item_course" />
+
+        <!-- État de chargement/erreur -->
+        <LinearLayout
+            android:id="@+id/layoutStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageStatus"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_book"
+                android:tint="@color/gray_600"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:id="@+id/textStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAppearance="@style/TextAppearance.EduNova.Body1"
+                android:textColor="@color/gray_700"
+                android:textAlignment="center"
+                android:gravity="center"
+                tools:text="Chargement des cours..." />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonRetry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Réessayer"
+                android:visibility="gone"
+                style="@style/Widget.Material3.Button.TextButton" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

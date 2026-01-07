@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Student Selection -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="👤 Sélectionner un étudiant"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinnerStudent"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_background_light" />
+
+    <!-- Course Selection -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="📚 Sélectionner un cours"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinnerCourse"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_background_light" />
+
+    <!-- Enrollment Options -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="⚙️ Options d'inscription"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAutoApprove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="✅ Approuver automatiquement" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSendNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="📧 Envoyer une notification à l'étudiant" />
+
+    <CheckBox
+        android:id="@+id/checkBoxNotifyTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="👨‍🏫 Notifier l'enseignant" />
+
+    <!-- Additional Notes -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="📝 Notes additionnelles (optionnel)">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:minLines="2" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

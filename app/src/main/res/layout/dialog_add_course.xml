@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Title Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="📚 Titre du cours">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Description Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="📝 Description du cours">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:minLines="3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Teacher Selection -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="👨‍🏫 Enseignant assigné"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:id="@+id/spinnerTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_background_light" />
+
+    <!-- Course Status -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="📊 Statut du cours"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioButtonActive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="✅ Actif"
+            android:textColor="@color/text_primary" />
+
+        <RadioButton
+            android:id="@+id/radioButtonInactive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⏸️ Inactif"
+            android:textColor="@color/text_primary" />
+
+        <RadioButton
+            android:id="@+id/radioButtonPending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⏳ En attente"
+            android:textColor="@color/text_primary" />
+
+    </RadioGroup>
+
+    <!-- Course Visibility and Access -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="👁️ Visibilité et Accès"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxPublic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="🌐 Cours public (visible par tous les étudiants)"
+        android:textColor="@color/text_primary" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEnrollmentOpen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="📝 Inscriptions ouvertes (étudiants peuvent s'inscrire)"
+        android:textColor="@color/text_primary" />
+
+</LinearLayout>

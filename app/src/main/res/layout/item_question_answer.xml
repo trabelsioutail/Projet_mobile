@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_background_info_light"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_edit"
+        android:tint="@color/info" />
+
+    <TextView
+        android:id="@+id/tvAnswerText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:text="Réponse libre attendue"
+        android:textColor="@color/info"
+        android:textSize="14sp"
+        android:textStyle="italic" />
+</LinearLayout>

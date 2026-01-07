@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- En-tête avec salutation -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/purple_500"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bonjour,"
+                        android:textColor="@color/purple_200"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/textTeacherName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.EduNova.Headline2"
+                        android:textColor="@android:color/white"
+                        tools:text="Ghofrane Sebteoui" />
+
+                </LinearLayout>
+
+                <!-- Notifications -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    app:cardCornerRadius="24dp"
+                    app:cardBackgroundColor="@color/purple_700">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_notifications"
+                        android:tint="@android:color/white"
+                        tools:ignore="UseAppTint" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Cartes de statistiques -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-30dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <!-- Première ligne de stats -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <!-- Cours créés -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardBackgroundColor="@color/purple_500">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_book"
+                                    android:tint="@android:color/white"
+                                    tools:ignore="UseAppTint" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textCoursesCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="@style/TextAppearance.EduNova.Headline1"
+                                    android:textColor="@color/purple_700"
+                                    tools:text="3" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cours"
+                                    android:textAppearance="@style/TextAppearance.EduNova.Caption"
+                                    android:textColor="@color/gray_600" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Étudiants -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardBackgroundColor="#4CAF50">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_people"
+                                    android:tint="@android:color/white"
+                                    tools:ignore="UseAppTint" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textStudentsCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="@style/TextAppearance.EduNova.Headline1"
+                                    android:textColor="#4CAF50"
+                                    tools:text="25" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Étudiants"
+                                    android:textAppearance="@style/TextAppearance.EduNova.Caption"
+                                    android:textColor="@color/gray_600" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- Deuxième ligne de stats -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <!-- Ressources -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardBackgroundColor="#FF9800">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_folder"
+                                    android:tint="@android:color/white"
+                                    tools:ignore="UseAppTint" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textResourcesCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="@style/TextAppearance.EduNova.Headline1"
+                                    android:textColor="#FF9800"
+                                    tools:text="12" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ressources"
+                                    android:textAppearance="@style/TextAppearance.EduNova.Caption"
+                                    android:textColor="@color/gray_600" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Évaluations en attente -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:cardCornerRadius="20dp"
+                                app:cardBackgroundColor="#F44336">
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_assignment"
+                                    android:tint="@android:color/white"
+                                    tools:ignore="UseAppTint" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textPendingEvaluations"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAppearance="@style/TextAppearance.EduNova.Headline1"
+                                    android:textColor="#F44336"
+                                    tools:text="5" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="À corriger"
+                                    android:textAppearance="@style/TextAppearance.EduNova.Caption"
+                                    android:textColor="@color/gray_600" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Actions rapides -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actions rapides"
+                android:textAppearance="@style/TextAppearance.EduNova.Headline3"
+                android:textColor="@color/purple_700"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Créer un cours -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardCreateCourse"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="@color/purple_500">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_add"
+                            android:tint="@android:color/white"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Nouveau\nCours"
+                            android:textAppearance="@style/TextAppearance.EduNova.Body2"
+                            android:textColor="@android:color/white"
+                            android:textAlignment="center"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Voir les quiz -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardViewQuizzes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="#4CAF50">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_quiz"
+                            android:tint="@android:color/white"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Mes\nQuiz"
+                            android:textAppearance="@style/TextAppearance.EduNova.Body2"
+                            android:textColor="@android:color/white"
+                            android:textAlignment="center"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Messages -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardMessages"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="#FF9800">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:src="@drawable/ic_message"
+                            android:tint="@android:color/white"
+                            tools:ignore="UseAppTint" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Messages"
+                            android:textAppearance="@style/TextAppearance.EduNova.Body2"
+                            android:textColor="@android:color/white"
+                            android:textAlignment="center"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Cours récents -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cours récents"
+                    android:textAppearance="@style/TextAppearance.EduNova.Headline3"
+                    android:textColor="@color/purple_700" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonViewAllCourses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Voir tout"
+                    android:textSize="12sp"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    app:icon="@drawable/ic_arrow_forward"
+                    app:iconGravity="end" />
+
+            </LinearLayout>
+
+            <!-- RecyclerView pour les cours récents -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewRecentCourses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_course_compact" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+    <!-- AI Chat Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAiChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="Assistant IA"
+        android:src="@drawable/ic_ai_robot"
+        app:backgroundTint="@color/ai_chat_fab_bg"
+        app:tint="@color/white"
+        app:elevation="8dp"
+        app:pressedTranslationZ="12dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

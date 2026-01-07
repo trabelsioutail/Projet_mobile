@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary_color">#6200EE</color>
+    <color name="primary">#6200EE</color>
+    <color name="primary_variant">#3700B3</color>
+    <color name="secondary_color">#03DAC6</color>
+    <color name="secondary">#03DAC6</color>
+    <color name="secondary_variant">#018786</color>
+    
+    <!-- Background Colors -->
+    <color name="background_color">#FFFFFF</color>
+    <color name="background">#FFFFFF</color>
+    <color name="surface_color">#FFFFFF</color>
+    <color name="surface">#FFFFFF</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    <color name="text_on_secondary">#000000</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_secondary">#000000</color>
+    <color name="on_background">#000000</color>
+    <color name="on_surface">#000000</color>
+    <color name="on_surface_variant">#49454F</color>
+    
+    <!-- Status Colors -->
+    <color name="success_color">#4CAF50</color>
+    <color name="error_color">#F44336</color>
+    <color name="error">#F44336</color>
+    <color name="warning_color">#FF9800</color>
+    <color name="info_color">#2196F3</color>
+    
+    <!-- Additional Colors -->
+    <color name="divider_color">#E0E0E0</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="card_background">#FAFAFA</color>
+    <color name="ripple_color">#1F000000</color>
+    
+    <!-- Missing Colors for Quiz Features -->
+    <color name="background_light">#F8F9FA</color>
+    <color name="primary_dark">#3700B3</color>
+    <color name="primary_light">#BB86FC</color>
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="info">#2196F3</color>
+    <color name="gray_50">#FAFAFA</color>
+    <color name="gray_100">#F5F5F5</color>
+    <color name="gray_200">#EEEEEE</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_600">#757575</color>
+    <color name="gray_700">#616161</color>
+    <color name="gray_800">#424242</color>
+    <color name="gray_900">#212121</color>
+    
+    <!-- Material Design Colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Bottom Navigation Colors -->
+    <color name="bottom_nav_color">@color/primary</color>
+    
+    <!-- Admin Dashboard Colors -->
+    <!-- Header Gradient -->
+    <color name="primary_gradient_start">#667eea</color>
+    <color name="primary_gradient_end">#764ba2</color>
+    
+    <!-- Statistics Cards -->
+    <color name="stats_users_bg">#E3F2FD</color>
+    <color name="stats_users_icon">#1976D2</color>
+    <color name="stats_users_text">#1976D2</color>
+    <color name="stats_users_subtitle">#1565C0</color>
+    
+    <color name="stats_courses_bg">#E8F5E8</color>
+    <color name="stats_courses_icon">#388E3C</color>
+    <color name="stats_courses_text">#388E3C</color>
+    <color name="stats_courses_subtitle">#2E7D32</color>
+    
+    <color name="stats_quizzes_bg">#FFF3E0</color>
+    <color name="stats_quizzes_icon">#F57C00</color>
+    <color name="stats_quizzes_text">#F57C00</color>
+    <color name="stats_quizzes_subtitle">#EF6C00</color>
+    
+    <!-- Management Cards -->
+    <color name="card_users_bg">#F3E5F5</color>
+    <color name="card_users_icon">#7B1FA2</color>
+    <color name="card_users_text">#7B1FA2</color>
+    <color name="card_users_subtitle">#6A1B9A</color>
+    
+    <color name="card_courses_bg">#E0F2F1</color>
+    <color name="card_courses_icon">#00695C</color>
+    <color name="card_courses_text">#00695C</color>
+    <color name="card_courses_subtitle">#004D40</color>
+    
+    <color name="card_quizzes_bg">#FFF8E1</color>
+    <color name="card_quizzes_icon">#F57F17</color>
+    <color name="card_quizzes_text">#F57F17</color>
+    <color name="card_quizzes_subtitle">#F9A825</color>
+    
+    <color name="card_reports_bg">#E8EAF6</color>
+    <color name="card_reports_icon">#3F51B5</color>
+    <color name="card_reports_text">#3F51B5</color>
+    <color name="card_reports_subtitle">#303F9F</color>
+    
+    <color name="card_settings_bg">#EFEBE9</color>
+    <color name="card_settings_icon">#5D4037</color>
+    <color name="card_settings_text">#5D4037</color>
+    <color name="card_settings_subtitle">#4E342E</color>
+    
+    <color name="card_backup_bg">#FCE4EC</color>
+    <color name="card_backup_icon">#C2185B</color>
+    <color name="card_backup_text">#C2185B</color>
+    <color name="card_backup_subtitle">#AD1457</color>
+    
+    <!-- System Status -->
+    <color name="system_status_bg">#F5F5F5</color>
+    <color name="system_status_title">#424242</color>
+    <color name="system_status_text">#616161</color>
+    
+    <!-- Admin User Management Colors -->
+    <color name="admin_background_light">#F8F9FA</color>
+    <color name="admin_card_students">#E3F2FD</color>
+    <color name="admin_card_teachers">#E8F5E8</color>
+    <color name="admin_card_admins">#F3E5F5</color>
+    <color name="admin_card_total">#FFF3E0</color>
+    <color name="admin_error">#F44336</color>
+    
+    <!-- Admin Interface Colors -->
+    <color name="admin_primary">#7C4DFF</color>
+    <color name="admin_success">#4CAF50</color>
+    <color name="admin_warning">#FF9800</color>
+    <color name="admin_info">#2196F3</color>
+    
+    <!-- Admin Card Colors -->
+    <color name="admin_card_general">#7C4DFF</color>
+    <color name="admin_card_enrollment">#4CAF50</color>
+    <color name="admin_card_notification">#FF9800</color>
+    <color name="admin_card_grading">#2196F3</color>
+    <color name="admin_card_backup">#9C27B0</color>
+    <color name="admin_card_integration">#00BCD4</color>
+    <color name="admin_card_security">#F44336</color>
+    <color name="admin_card_maintenance">#795548</color>
+    
+    <!-- Admin Chip Colors -->
+    <color name="admin_chip_background">#E8EAF6</color>
+    
+    <!-- Common Colors -->
+    <color name="transparent">#00000000</color>
+    
+    <!-- Email System Colors -->
+    <color name="info_background">#E3F2FD</color>
+    <color name="info_border">#BBDEFB</color>
+
+</resources>

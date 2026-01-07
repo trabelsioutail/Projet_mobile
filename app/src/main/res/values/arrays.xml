@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="backup_frequency_options">
+        <item>Quotidien</item>
+        <item>Hebdomadaire</item>
+        <item>Mensuel</item>
+    </string-array>
+</resources>

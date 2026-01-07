@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/admin_chip_background"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp"
+    app:rippleColor="@color/admin_primary">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/textViewSuggestionIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:textSize="14sp"
+            tools:text="📚" />
+
+        <TextView
+            android:id="@+id/textViewSuggestionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/admin_primary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:text="Créer un cours" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_admin"
+    app:startDestination="@id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.edunova.mobile.presentation.ui.admin.AdminDashboardFragment"
+        android:label="@string/nav_dashboard"
+        tools:layout="@layout/fragment_admin_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_courses"
+        android:name="com.edunova.mobile.presentation.ui.admin.AdminCoursesFragment"
+        android:label="@string/nav_courses"
+        tools:layout="@layout/fragment_admin_courses">
+        
+        <action
+            android:id="@+id/action_courses_to_course_detail"
+            app:destination="@id/courseDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_quizzes"
+        android:name="com.edunova.mobile.presentation.ui.admin.AdminQuizzesFragment"
+        android:label="@string/nav_quizzes"
+        tools:layout="@layout/fragment_admin_quizzes">
+        
+        <action
+            android:id="@+id/action_quizzes_to_quiz_detail"
+            app:destination="@id/quizDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_messages"
+        android:name="com.edunova.mobile.presentation.ui.admin.AdminMessagesFragment"
+        android:label="@string/nav_messages"
+        tools:layout="@layout/fragment_admin_messages">
+        
+        <action
+            android:id="@+id/action_messages_to_conversation"
+            app:destination="@id/conversationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.edunova.mobile.presentation.ui.admin.AdminProfileFragment"
+        android:label="@string/nav_profile"
+        tools:layout="@layout/fragment_admin_profile" />
+
+    <!-- Detail fragments -->
+    <fragment
+        android:id="@+id/courseDetailFragment"
+        android:name="com.edunova.mobile.presentation.ui.admin.CourseDetailFragment"
+        android:label="@string/course_details"
+        tools:layout="@layout/fragment_course_detail">
+        
+        <argument
+            android:name="courseId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quizDetailFragment"
+        android:name="com.edunova.mobile.presentation.ui.admin.QuizDetailFragment"
+        android:label="Détails du quiz"
+        tools:layout="@layout/fragment_quiz_detail">
+        
+        <argument
+            android:name="quizId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/conversationFragment"
+        android:name="com.edunova.mobile.presentation.ui.admin.ConversationFragment"
+        android:label="@string/conversations"
+        tools:layout="@layout/fragment_conversation">
+        
+        <argument
+            android:name="conversationId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/usersManagementFragment"
+        android:name="com.edunova.mobile.presentation.ui.admin.SimpleAdminUsersFragment"
+        android:label="Gestion des utilisateurs"
+        tools:layout="@layout/fragment_simple_admin_users" />
+
+</navigation>

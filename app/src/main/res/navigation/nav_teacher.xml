@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_teacher"
+    app:startDestination="@id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.edunova.mobile.presentation.ui.teacher.TeacherDashboardFragment"
+        android:label="@string/nav_dashboard"
+        tools:layout="@layout/fragment_teacher_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_courses"
+        android:name="com.edunova.mobile.presentation.ui.teacher.TeacherCoursesFragment"
+        android:label="@string/nav_courses"
+        tools:layout="@layout/fragment_teacher_courses">
+        
+        <action
+            android:id="@+id/action_courses_to_course_detail"
+            app:destination="@id/courseDetailFragment" />
+        
+        <action
+            android:id="@+id/action_courses_to_create_course"
+            app:destination="@id/createCourseFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_quizzes"
+        android:name="com.edunova.mobile.presentation.ui.teacher.TeacherQuizzesFragment"
+        android:label="@string/nav_quizzes"
+        tools:layout="@layout/fragment_teacher_quizzes">
+        
+        <action
+            android:id="@+id/action_quizzes_to_quiz_detail"
+            app:destination="@id/quizDetailFragment" />
+        
+        <action
+            android:id="@+id/action_quizzes_to_create_quiz"
+            app:destination="@id/createQuizFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_messages"
+        android:name="com.edunova.mobile.presentation.ui.teacher.TeacherMessagesFragment"
+        android:label="@string/nav_messages"
+        tools:layout="@layout/fragment_teacher_messages">
+        
+        <action
+            android:id="@+id/action_messages_to_conversation"
+            app:destination="@id/conversationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.edunova.mobile.presentation.ui.teacher.TeacherProfileEnhancedFragment"
+        android:label="@string/nav_profile"
+        tools:layout="@layout/fragment_teacher_profile_enhanced" />
+
+    <!-- Fragments de détail -->
+    <fragment
+        android:id="@+id/courseDetailFragment"
+        android:name="com.edunova.mobile.presentation.ui.teacher.CourseDetailFragment"
+        android:label="Détails du Cours"
+        tools:layout="@layout/fragment_course_detail">
+        
+        <argument
+            android:name="courseId"
+            app:argType="integer" />
+            
+        <action
+            android:id="@+id/action_course_detail_to_edit_course"
+            app:destination="@id/createCourseFragment" />
+            
+        <action
+            android:id="@+id/action_course_detail_to_create_quiz"
+            app:destination="@id/createQuizFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createCourseFragment"
+        android:name="com.edunova.mobile.presentation.ui.teacher.CreateCourseFragment"
+        android:label="Nouveau Cours"
+        tools:layout="@layout/fragment_create_course">
+        
+        <argument
+            android:name="courseId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quizDetailFragment"
+        android:name="com.edunova.mobile.presentation.ui.teacher.QuizDetailFragment"
+        android:label="Détails du Quiz"
+        tools:layout="@layout/fragment_quiz_detail">
+        
+        <argument
+            android:name="quizId"
+            app:argType="integer" />
+            
+        <action
+            android:id="@+id/action_quiz_detail_to_submissions"
+            app:destination="@id/quizSubmissionsFragment" />
+            
+        <action
+            android:id="@+id/action_quiz_detail_to_edit_quiz"
+            app:destination="@id/createQuizFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createQuizFragment"
+        android:name="com.edunova.mobile.presentation.ui.teacher.CreateQuizFragment"
+        android:label="Nouveau Quiz"
+        tools:layout="@layout/fragment_create_quiz">
+        
+        <argument
+            android:name="courseId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+            
+        <argument
+            android:name="quizId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/conversationFragment"
+        android:name="com.edunova.mobile.presentation.ui.teacher.ConversationFragment"
+        android:label="Conversation"
+        tools:layout="@layout/fragment_conversation">
+        
+        <argument
+            android:name="conversationId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quizSubmissionsFragment"
+        android:name="com.edunova.mobile.presentation.ui.teacher.QuizSubmissionsFragment"
+        android:label="Soumissions du Quiz"
+        tools:layout="@layout/fragment_quiz_submissions">
+        
+        <argument
+            android:name="quizId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

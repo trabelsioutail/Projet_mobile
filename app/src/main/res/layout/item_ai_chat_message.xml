@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp"
+    android:orientation="vertical">
+
+    <!-- User Message -->
+    <LinearLayout
+        android:id="@+id/layoutUserMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textViewUserMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:background="@drawable/rounded_background_primary"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            tools:text="Comment créer un nouveau cours ?" />
+
+    </LinearLayout>
+
+    <!-- AI Message -->
+    <LinearLayout
+        android:id="@+id/layoutAiMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/rounded_background_ai"
+            android:padding="6dp"
+            android:src="@drawable/ic_ai_robot"
+            android:tint="@color/white" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_background_white"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/textViewAiMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                tools:text="Pour créer un nouveau cours, allez dans la section 'Cours' et cliquez sur le bouton '+'. Je peux vous guider étape par étape !" />
+
+            <!-- Suggestions -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewMessageSuggestions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:listitem="@layout/item_ai_suggestion_small" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Timestamp -->
+    <TextView
+        android:id="@+id/textViewTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/text_secondary"
+        android:textSize="10sp"
+        tools:text="14:30" />
+
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_student"
+    app:startDestination="@id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.edunova.mobile.presentation.ui.student.StudentDashboardFragment"
+        android:label="@string/nav_dashboard"
+        tools:layout="@layout/fragment_student_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_courses"
+        android:name="com.edunova.mobile.presentation.ui.student.StudentCoursesFragment"
+        android:label="@string/nav_courses"
+        tools:layout="@layout/fragment_student_courses">
+        
+        <action
+            android:id="@+id/action_courses_to_course_detail"
+            app:destination="@id/courseDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_quizzes"
+        android:name="com.edunova.mobile.presentation.ui.student.StudentQuizzesFragment"
+        android:label="@string/nav_quizzes"
+        tools:layout="@layout/fragment_student_quizzes">
+        
+        <action
+            android:id="@+id/action_quizzes_to_take_quiz"
+            app:destination="@id/takeQuizFragment" />
+        
+        <action
+            android:id="@+id/action_quizzes_to_quiz_result"
+            app:destination="@id/quizResultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_messages"
+        android:name="com.edunova.mobile.presentation.ui.student.StudentMessagesFragment"
+        android:label="@string/nav_messages"
+        tools:layout="@layout/fragment_student_messages">
+        
+        <action
+            android:id="@+id/action_messages_to_conversation"
+            app:destination="@id/conversationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.edunova.mobile.presentation.ui.student.StudentProfileFragment"
+        android:label="@string/nav_profile"
+        tools:layout="@layout/fragment_student_profile">
+        
+        <action
+            android:id="@+id/action_profile_to_badges"
+            app:destination="@id/badgesFragment" />
+    </fragment>
+
+    <!-- Detail fragments -->
+    <fragment
+        android:id="@+id/courseDetailFragment"
+        android:name="com.edunova.mobile.presentation.ui.student.CourseDetailFragment"
+        android:label="@string/course_details"
+        tools:layout="@layout/fragment_course_detail_student">
+        
+        <argument
+            android:name="courseId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/takeQuizFragment"
+        android:name="com.edunova.mobile.presentation.ui.student.TakeQuizFragment"
+        android:label="@string/take_quiz"
+        tools:layout="@layout/fragment_take_quiz">
+        
+        <argument
+            android:name="quizId"
+            app:argType="integer" />
+        
+        <action
+            android:id="@+id/action_take_quiz_to_result"
+            app:destination="@id/quizResultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quizResultFragment"
+        android:name="com.edunova.mobile.presentation.ui.student.QuizResultFragment"
+        android:label="@string/quiz_results"
+        tools:layout="@layout/fragment_quiz_result">
+        
+        <argument
+            android:name="submissionId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/conversationFragment"
+        android:name="com.edunova.mobile.presentation.ui.student.ConversationFragment"
+        android:label="@string/conversations"
+        tools:layout="@layout/fragment_conversation">
+        
+        <argument
+            android:name="conversationId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/badgesFragment"
+        android:name="com.edunova.mobile.presentation.ui.student.BadgesFragment"
+        android:label="@string/badges"
+        tools:layout="@layout/fragment_badges" />
+
+</navigation>

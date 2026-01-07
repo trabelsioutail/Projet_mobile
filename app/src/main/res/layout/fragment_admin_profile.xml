@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Profile Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Profile Picture -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/rounded_background_primary"
+                    android:contentDescription="Photo de profil admin"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_admin_panel_settings"
+                    app:tint="@android:color/white" />
+
+                <!-- Admin Info -->
+                <TextView
+                    android:id="@+id/textViewAdminName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:text="Administrateur EduNova" />
+
+                <TextView
+                    android:id="@+id/textViewAdminEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="14sp"
+                    tools:text="admin@edunova.tn" />
+
+                <TextView
+                    android:id="@+id/textViewAdminRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/rounded_background_primary"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:text="👑 Super Administrateur" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- System Statistics -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="📊 Statistiques du système"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Statistics Grid -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Users Stats -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewTotalUsers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorPrimary"
+                            tools:text="150" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="👥 Utilisateurs"
+                            android:textSize="12sp"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                    </LinearLayout>
+
+                    <!-- Courses Stats -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewTotalCourses"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorPrimary"
+                            tools:text="25" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📚 Cours"
+                            android:textSize="12sp"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                    </LinearLayout>
+
+                    <!-- Quizzes Stats -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewTotalQuizzes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorPrimary"
+                            tools:text="75" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📝 Quiz"
+                            android:textSize="12sp"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                    </LinearLayout>
+
+                    <!-- Enrollments Stats -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewTotalEnrollments"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="?attr/colorPrimary"
+                            tools:text="300" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📋 Inscriptions"
+                            android:textSize="12sp"
+                            android:textColor="?android:attr/textColorSecondary" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Quick Actions -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="⚡ Actions rapides"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Quick Action Cards Grid -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Users Card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardUsers"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_people"
+                                app:tint="?attr/colorPrimary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Utilisateurs"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Courses Card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardCourses"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_school"
+                                app:tint="?attr/colorPrimary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Cours"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Quizzes Card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardQuizzes"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_quiz"
+                                app:tint="?attr/colorPrimary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Quiz"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Reports Card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardReports"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_weight="1"
+                        android:layout_margin="4dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_assessment"
+                                app:tint="?attr/colorPrimary" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Rapports"
+                                android:textSize="10sp" />
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Profile Actions -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="⚙️ Paramètres du profil"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!-- Edit Profile Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonEditProfile"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="✏️ Modifier le profil"
+                    app:icon="@drawable/ic_edit" />
+
+                <!-- Change Password Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonChangePassword"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="🔒 Changer le mot de passe"
+                    app:icon="@drawable/ic_lock" />
+
+                <!-- System Settings Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonSystemSettings"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="⚙️ Paramètres système"
+                    app:icon="@drawable/ic_settings" />
+
+                <!-- Create Backup Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonCreateBackup"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="💾 Créer une sauvegarde"
+                    app:icon="@drawable/ic_backup" />
+
+                <!-- Logout Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonLogout"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🚪 Se déconnecter"
+                    android:textColor="@android:color/holo_red_dark"
+                    app:icon="@drawable/ic_logout"
+                    app:iconTint="@android:color/holo_red_dark"
+                    app:strokeColor="@android:color/holo_red_dark" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</ScrollView>

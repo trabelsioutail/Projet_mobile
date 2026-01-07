@@ -1,0 +1,227 @@
+<resources>
+    <!-- App Info -->
+    <string name="app_name">EduNova</string>
+    <string name="app_tagline">Plateforme d\'apprentissage intelligente</string>
+    <string name="cd_logo">Logo EduNova</string>
+    
+    <!-- Navigation -->
+    <string name="nav_dashboard">Tableau de bord</string>
+    <string name="nav_courses">Cours</string>
+    <string name="nav_quizzes">Quiz</string>
+    <string name="nav_messages">Messages</string>
+    <string name="nav_profile">Profil</string>
+    
+    <!-- Course Detail -->
+    <string name="course_details">Détails du cours</string>
+    
+    <!-- Quiz -->
+    <string name="take_quiz">Passer le quiz</string>
+    <string name="quiz_results">Résultats du quiz</string>
+    
+    <!-- Conversations -->
+    <string name="conversations">Conversations</string>
+    
+    <!-- Badges -->
+    <string name="badges">Badges</string>
+    
+    <!-- Actions -->
+    <string name="action_create">Créer</string>
+    <string name="action_edit">Modifier</string>
+    <string name="action_delete">Supprimer</string>
+    <string name="action_save">Sauvegarder</string>
+    <string name="action_cancel">Annuler</string>
+    <string name="action_send">Envoyer</string>
+    <string name="action_view">Voir</string>
+    <string name="action_download">Télécharger</string>
+    <string name="action_share">Partager</string>
+    
+    <!-- Course related -->
+    <string name="course_title">Titre du cours</string>
+    <string name="course_description">Description du cours</string>
+    <string name="course_create">Créer un cours</string>
+    <string name="course_edit">Modifier le cours</string>
+    <string name="course_delete">Supprimer le cours</string>
+    <string name="course_view_details">Voir les détails</string>
+    
+    <!-- Quiz related -->
+    <string name="quiz_title">Titre du quiz</string>
+    <string name="quiz_description">Description du quiz</string>
+    <string name="quiz_create">Créer un quiz</string>
+    <string name="quiz_edit">Modifier le quiz</string>
+    <string name="quiz_delete">Supprimer le quiz</string>
+    <string name="quiz_publish">Publier le quiz</string>
+    <string name="quiz_submissions">Voir les soumissions</string>
+    
+    <!-- Messages -->
+    <string name="message_send">Envoyer un message</string>
+    <string name="message_type_here">Tapez votre message ici...</string>
+    <string name="conversation_with">Conversation avec %s</string>
+    
+    <!-- Common -->
+    <string name="loading">Chargement...</string>
+    <string name="error_occurred">Une erreur s\'est produite</string>
+    <string name="success">Succès</string>
+    <string name="no_data">Aucune donnée disponible</string>
+    <string name="courses">Cours</string>
+    <string name="quizzes">Quiz</string>
+    <string name="students">Étudiants</string>
+    <string name="users">Utilisateurs</string>
+    
+    <!-- Admin -->
+    <string name="manage_users">Gérer les utilisateurs</string>
+    <string name="manage_courses">Gérer les cours</string>
+    <string name="manage_quizzes">Gérer les quiz</string>
+    <string name="reports">Rapports</string>
+    <string name="system_settings">Paramètres système</string>
+    <string name="backup">Sauvegarde</string>
+    
+    <!-- Profile -->
+    <string name="edit_profile">Modifier le profil</string>
+    <string name="settings">Paramètres</string>
+    <string name="logout">Déconnexion</string>
+    
+    <!-- Empty states -->
+    <string name="no_conversations">Aucune conversation</string>
+    <string name="no_quizzes">Aucun quiz</string>
+    <string name="create_first_quiz">Créez votre premier quiz</string>
+    
+    <!-- Authentication -->
+    <string name="login">Connexion</string>
+    <string name="register">Inscription</string>
+    <string name="email">Email</string>
+    <string name="password">Mot de passe</string>
+    <string name="confirm_password">Confirmer le mot de passe</string>
+    <string name="first_name">Prénom</string>
+    <string name="last_name">Nom</string>
+    <string name="forgot_password">Mot de passe oublié ?</string>
+    <string name="reset_password">Réinitialiser le mot de passe</string>
+    <string name="login_with_google">Se connecter avec Google</string>
+    <string name="dont_have_account">Vous n\'avez pas de compte ?</string>
+    <string name="already_have_account">Vous avez déjà un compte ?</string>
+    <string name="create_account">Créer un compte</string>
+    
+    <!-- Permissions -->
+    <string name="permission_camera">Autorisation d\'accès à la caméra</string>
+    <string name="permission_storage">Autorisation d\'accès au stockage</string>
+    <string name="permission_notification">Autorisation de notification</string>
+    
+    <!-- Validation -->
+    <string name="validation_required">Ce champ est requis</string>
+    <string name="validation_email_invalid">Email invalide</string>
+    <string name="validation_password_too_short">Le mot de passe doit contenir au moins 6 caractères</string>
+    <string name="validation_password_min_length">Le mot de passe doit contenir au moins 6 caractères</string>
+    <string name="validation_passwords_dont_match">Les mots de passe ne correspondent pas</string>
+    
+    <!-- Admin specific -->
+    <string name="admin_dashboard">Tableau de bord Admin</string>
+    <string name="admin_users">Utilisateurs</string>
+    <string name="admin_courses">Cours</string>
+    <string name="admin_quizzes">Quiz</string>
+    <string name="admin_reports">Rapports</string>
+    <string name="admin_settings">Paramètres</string>
+    <string name="admin_backup">Sauvegarde</string>
+    <string name="add_user">Ajouter un utilisateur</string>
+    <string name="edit_user">Modifier l\'utilisateur</string>
+    <string name="delete_user">Supprimer l\'utilisateur</string>
+    <string name="user_role">Rôle</string>
+    <string name="user_status">Statut</string>
+    <string name="active">Actif</string>
+    <string name="inactive">Inactif</string>
+    <string name="role_student">Étudiant</string>
+    <string name="role_teacher">Enseignant</string>
+    <string name="role_admin">Administrateur</string>
+    <string name="generate_report">Générer un rapport</string>
+    <string name="backup_create">Créer une sauvegarde</string>
+    <string name="backup_restore">Restaurer</string>
+    <string name="system_stats">Statistiques système</string>
+    <string name="total_users">Total utilisateurs</string>
+    <string name="total_courses">Total cours</string>
+    <string name="total_quizzes">Total quiz</string>
+    
+    <!-- Dialogs -->
+    <string name="dialog_confirm">Confirmer</string>
+    <string name="dialog_cancel">Annuler</string>
+    <string name="dialog_delete_title">Supprimer</string>
+    <string name="dialog_delete_message">Êtes-vous sûr de vouloir supprimer cet élément ?</string>
+    
+    <!-- Status messages -->
+    <string name="operation_success">Opération réussie</string>
+    <string name="operation_failed">Opération échouée</string>
+    <string name="network_error">Erreur réseau</string>
+    <string name="please_wait">Veuillez patienter...</string>
+    
+    <!-- User roles array -->
+    <string-array name="user_roles">
+        <item>etudiant</item>
+        <item>enseignant</item>
+        <item>admin</item>
+    </string-array>
+    
+    <string-array name="user_roles_display">
+        <item>Étudiant</item>
+        <item>Enseignant</item>
+        <item>Administrateur</item>
+    </string-array>
+    
+    <!-- Sample Teachers Array -->
+    <string-array name="sample_teachers">
+        <item>Ghofrane Sebteoui</item>
+        <item>Eya Benhazem</item>
+        <item>Lamia Mansouri</item>
+        <item>Mahdi Benrhouma</item>
+        <item>Enseignant Test</item>
+    </string-array>
+    
+    <!-- Admin Course Management -->
+    <string name="admin_view_all_courses">Voir tous les cours</string>
+    <string name="admin_manage_enrollments">Gérer les inscriptions</string>
+    <string name="admin_course_settings">Paramètres des cours</string>
+    <string name="add_course">Ajouter un cours</string>
+    <string name="edit_course">Modifier le cours</string>
+    <string name="delete_course">Supprimer le cours</string>
+    <string name="course_name">Nom du cours</string>
+    <string name="course_instructor">Instructeur</string>
+    <string name="course_category">Catégorie</string>
+    <string name="course_level">Niveau</string>
+    <string name="course_duration">Durée</string>
+    <string name="course_price">Prix</string>
+    <string name="course_status">Statut</string>
+    <string name="published">Publié</string>
+    <string name="draft">Brouillon</string>
+    <string name="archived">Archivé</string>
+    <string name="enrollment_management">Gestion des inscriptions</string>
+    <string name="add_enrollment">Ajouter une inscription</string>
+    <string name="student_name">Nom de l\'étudiant</string>
+    <string name="enrollment_date">Date d\'inscription</string>
+    <string name="enrollment_status">Statut d\'inscription</string>
+    <string name="enrolled">Inscrit</string>
+    <string name="pending">En attente</string>
+    <string name="completed">Terminé</string>
+    <string name="dropped">Abandonné</string>
+    <string name="course_settings">Paramètres du cours</string>
+    <string name="general_settings">Paramètres généraux</string>
+    <string name="enrollment_settings">Paramètres d\'inscription</string>
+    <string name="notification_settings">Paramètres de notification</string>
+    <string name="grading_settings">Paramètres de notation</string>
+    <string name="backup_settings">Paramètres de sauvegarde</string>
+    <string name="integration_settings">Paramètres d\'intégration</string>
+    <string name="security_settings">Paramètres de sécurité</string>
+    <string name="maintenance_settings">Paramètres de maintenance</string>
+    <string name="auto_enrollment">Inscription automatique</string>
+    <string name="manual_approval">Approbation manuelle</string>
+    <string name="max_students">Nombre maximum d\'étudiants</string>
+    <string name="enrollment_deadline">Date limite d\'inscription</string>
+    <string name="enable_notifications">Activer les notifications</string>
+    <string name="email_notifications">Notifications par email</string>
+    <string name="push_notifications">Notifications push</string>
+    <string name="grading_scale">Échelle de notation</string>
+    <string name="passing_grade">Note de passage</string>
+    <string name="auto_backup">Sauvegarde automatique</string>
+    <string name="backup_frequency">Fréquence de sauvegarde</string>
+    <string name="lms_integration">Intégration LMS</string>
+    <string name="api_settings">Paramètres API</string>
+    <string name="access_control">Contrôle d\'accès</string>
+    <string name="content_protection">Protection du contenu</string>
+    <string name="maintenance_mode">Mode maintenance</string>
+    <string name="system_updates">Mises à jour système</string>
+</resources>

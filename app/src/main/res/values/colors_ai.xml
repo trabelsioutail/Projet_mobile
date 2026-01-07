@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- AI Chat Colors -->
+    <color name="ai_chat_fab_bg">#667eea</color>
+    <color name="ai_chat_primary">#667eea</color>
+    <color name="ai_chat_secondary">#764ba2</color>
+    <color name="ai_message_bg">#f8f9fa</color>
+    <color name="user_message_bg">#667eea</color>
+    <color name="ai_suggestion_bg">#e3f2fd</color>
+    <color name="ai_suggestion_text">#1976d2</color>
+    
+    <!-- Role-specific AI colors -->
+    <color name="ai_admin_color">#667eea</color>
+    <color name="ai_teacher_color">#4CAF50</color>
+    <color name="ai_student_color">#2196F3</color>
+</resources>

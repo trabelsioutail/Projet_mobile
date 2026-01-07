@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.edunova.mobile.presentation.ui.auth.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login">
+        
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+        
+        <action
+            android:id="@+id/action_login_to_forgot_password"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.edunova.mobile.presentation.ui.auth.RegisterFragment"
+        android:label="@string/register"
+        tools:layout="@layout/fragment_register">
+        
+        <action
+            android:id="@+id/action_register_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.edunova.mobile.presentation.ui.auth.ForgotPasswordFragment"
+        android:label="@string/forgot_password"
+        tools:layout="@layout/fragment_forgot_password">
+        
+        <action
+            android:id="@+id/action_forgot_password_to_login"
+            app:destination="@id/loginFragment" />
+        
+        <action
+            android:id="@+id/action_forgot_password_to_reset_password"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.edunova.mobile.presentation.ui.auth.ResetPasswordFragment"
+        android:label="@string/reset_password"
+        tools:layout="@layout/fragment_reset_password">
+        
+        <argument
+            android:name="email"
+            app:argType="string" />
+        
+        <action
+            android:id="@+id/action_reset_password_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+</navigation>

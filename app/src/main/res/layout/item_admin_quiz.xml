@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Quiz Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_quiz"
+                app:tint="?attr/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewQuizTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="Quiz Programmation Chapitre 1" />
+
+                <TextView
+                    android:id="@+id/textViewCourseName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="14sp"
+                    tools:text="Cours: Introduction à la Programmation" />
+
+            </LinearLayout>
+
+            <!-- Status Control Section -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchQuizStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!-- Status Checkboxes -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkBoxActive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Actif"
+                        android:textSize="10sp"
+                        android:layout_marginEnd="4dp"
+                        android:buttonTint="@android:color/holo_green_dark" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxInactive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Inactif"
+                        android:textSize="10sp"
+                        android:buttonTint="@android:color/holo_red_dark" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Quiz Description -->
+        <TextView
+            android:id="@+id/textViewQuizDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="13sp"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="10"
+            android:ellipsize="end"
+            tools:text="Test sur les bases de la programmation avec statistiques détaillées" />
+
+        <!-- Quiz Details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewQuestionCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_background_primary"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    tools:text="10 questions" />
+
+                <TextView
+                    android:id="@+id/textViewTimeLimit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textSize="12sp"
+                    tools:text="30 min" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewMaxAttempts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    tools:text="3 tentatives" />
+
+                <TextView
+                    android:id="@+id/textViewPassingScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="12sp"
+                    tools:text="70% requis" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewQuizStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:text="Actif" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonViewQuiz"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Voir"
+                app:icon="@drawable/ic_visibility" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonEditQuiz"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="Modifier"
+                app:icon="@drawable/ic_edit" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDeleteQuiz"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Supprimer"
+                android:textColor="@android:color/holo_red_dark"
+                app:icon="@drawable/ic_delete"
+                app:iconTint="@android:color/holo_red_dark" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

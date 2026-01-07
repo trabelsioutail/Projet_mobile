@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageViewQuiz"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_quiz"
+            android:tint="?attr/colorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/buttonEdit"
+            app:layout_constraintStart_toEndOf="@id/imageViewQuiz"
+            app:layout_constraintTop_toTopOf="@id/imageViewQuiz"
+            tools:text="Quiz de Mathématiques" />
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/buttonEdit"
+            app:layout_constraintStart_toEndOf="@id/imageViewQuiz"
+            app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+            tools:text="Quiz sur les équations du second degré" />
+
+        <LinearLayout
+            android:id="@+id/layoutInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@id/imageViewQuiz"
+            app:layout_constraintTop_toBottomOf="@id/textViewDescription">
+
+            <TextView
+                android:id="@+id/textViewQuestionCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_role_badge"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="12sp"
+                tools:text="10 questions" />
+
+            <TextView
+                android:id="@+id/textViewDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_role_badge"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="12sp"
+                tools:text="30 min" />
+
+        </LinearLayout>
+
+        <!-- Statut pour les étudiants -->
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="?attr/colorSecondary"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/buttonEdit"
+            app:layout_constraintStart_toEndOf="@id/imageViewQuiz"
+            app:layout_constraintTop_toBottomOf="@id/layoutInfo"
+            tools:text="Complété - Score: 18/20"
+            tools:visibility="visible" />
+
+        <!-- Bouton pour commencer le quiz (étudiants) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonStartQuiz"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="Commencer le quiz"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/imageViewQuiz"
+            app:layout_constraintTop_toBottomOf="@id/textViewStatus"
+            tools:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/buttonEdit"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_edit"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/buttonDelete"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/buttonDelete"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_delete"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
